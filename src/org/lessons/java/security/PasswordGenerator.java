@@ -9,6 +9,7 @@ public class PasswordGenerator {
         // creates new instance of Scanner class
         Scanner in = new Scanner(System.in);
 
+        // gets user inputs
         System.out.print("Type your name: ");
         String name = in.nextLine();
         System.out.print("Type your surname: ");
@@ -22,7 +23,9 @@ public class PasswordGenerator {
         System.out.print("Type your birth day: ");
         int birthDay = in.nextInt();
 
-        password = name + "-" + surname + "-" + favColor + "-" + birthYear + birthMonth + birthDay;
+        // generates password and prints on screen
+        int birthdateSum = birthYear + birthMonth + birthDay;
+        password = name + "-" + surname + "-" + favColor + "-" + birthdateSum;
         System.out.println(password);
 
     }
